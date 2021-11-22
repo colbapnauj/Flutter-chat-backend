@@ -19,7 +19,8 @@ const crearUsuario = async (req, res = response) => {
                 ok: 'false',
                 // CUIDADO, no es recomendable devolver esta info (seguridad)
                 // msg: 'El correo ya está registrado'
-                msg: 'Credenciales incorrectas'
+                msg: 'El correo ya está registrado'
+                // msg: 'Credenciales incorrectas'
             })
         }
 
