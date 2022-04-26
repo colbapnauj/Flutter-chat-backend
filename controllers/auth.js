@@ -94,7 +94,7 @@ const login = async (req, res = response) => {
     }
 }
 const renewToken = async (req, res = response) => {
-    // const uid del uduario
+    // const uid del usuario
 
     const uid = req.uid;
 
@@ -111,6 +111,14 @@ const renewToken = async (req, res = response) => {
     });
 }
 
+const update = async (req, res = response) => {
+    res.json({
+        showButton: 'false',
+        urlAndroid: 'urlAndroid',
+        urlIOs: 'urlIOS'
+    })
+}
+
 module.exports = {
-    crearUsuario, login, renewToken
+    crearUsuario, login, renewToken, update
 }
