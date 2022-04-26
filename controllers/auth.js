@@ -19,7 +19,8 @@ const crearUsuario = async (req, res = response) => {
                 ok: 'false',
                 // CUIDADO, no es recomendable devolver esta info (seguridad)
                 // msg: 'El correo ya está registrado'
-                msg: 'Credenciales incorrectas'
+                msg: 'El correo ya está registrado'
+                // msg: 'Credenciales incorrectas'
             })
         }
 
@@ -93,7 +94,7 @@ const login = async (req, res = response) => {
     }
 }
 const renewToken = async (req, res = response) => {
-    // const uid del uduario
+    // const uid del usuario
 
     const uid = req.uid;
 
@@ -110,6 +111,14 @@ const renewToken = async (req, res = response) => {
     });
 }
 
+const update = async (req, res = response) => {
+    res.json({
+        showButton: 'false',
+        urlAndroid: 'urlAndroid',
+        urlIOs: 'urlIOS'
+    })
+}
+
 module.exports = {
-    crearUsuario, login, renewToken
+    crearUsuario, login, renewToken, update
 }
